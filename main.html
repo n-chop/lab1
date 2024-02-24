@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>John Doe</title>
+</head>
+<body>
+    <header>
+        <h1>Profile card</h1>        
+    </header>
+    <main>
+        <div id="card">
+                <div id="profile_photo">
+                    <img src="assets/img/john-doe.jpg" alt="photo">
+                </div>
+            <div id="about">
+                <h2>John Doe</h2>
+                <h3>Software Engineer</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus a erat vitae maximus. Phasellus pellentesque accumsan erat eget accumsan. Aenean eget placerat lorem. Suspendisse vitae dictum nisl. Curabitur cursus libero ornare tellus mattis, nec vehicula nunc ullamcorper. Mauris ut bibendum urna. Vestibulum in dui justo. Morbi ultrices vitae purus et mattis
+                </p>
+            </div>
+        </div>
+        <div id="contacts">
+            <div id="mail">
+                <span class="material-icons">
+                    mail_outline
+                </span>
+                <h4>Email:</h4>
+                <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+            </div>
+            <div id="phone">
+                <span class="material-icons">
+                    call
+                </span>
+                <h4>Phone:</h4>
+                <a href="tel:+1234567890">+1234567890</a>
+            </div>
+            <div id="location">
+                <span class="material-icons">
+                    my_location
+                </span>
+                <h4>Location:</h4>
+                <a href="https://maps.app.goo.gl/2KX66jgE9SyUi3Aq9">Lutsk, Ukraine</a>
+            </div>
+        </div>
+        <div id="skills">
+            <h3>Skills:</h3>
+            <div id="skills_wrap">
+                <div>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div id="xp">
+                    <div id="xp-bar-c"><div id="xp-bar"></div><p>100%</p></div>
+                    <div id="xp-bar-c"><div id="xp-bar"></div><p>100%</p></div>
+                    <div id="xp-bar-c"><div id="xp-bar"></div><p>100%</p></div>
+                    <div id="xp-bar-c"><div id="xp-bar"></div><p>100%</p></div>
+                    <div id="xp-bar-c"><div id="xp-bar"></div><p>100%</p></div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="sm">
+            <h3>Social Media:</h3>
+            <ol>
+                <li class="box">                
+                <img src="assets/icons/linkedin.png" alt="linkedin">
+                <a href="https://www.linkedin.com/in/johndoe">LinkedIn</a></li>
+                <li class="box">
+                    <img src="assets/icons/twitter.png" alt="twitter">
+                    <a href="https://twitter.com/johndoe">Twitter</a></li>
+                <li class="box">
+                    <img src="assets/icons/github.png" alt="github">
+                    <a href="https://github.com/johndoe">GitHub</a></li>
+            </ol>
+        </div>
+        <div id="edu">
+            <h3>Education:</h3>
+            <table>
+                <tr>
+                    <th>Degree</th>
+                    <th>University</th>
+                    <th>Years</th>
+                </tr>
+                <tr>
+                    <td>Bachelor's Degree in Computer Science</td>
+                    <td>University of ABC</td>
+                    <td>2020-2024</td>
+                </tr>
+            </table>
+        </div>
+        <div id="exp">
+            <h3>Experience:</h3>
+            <p class="welcome-msg gloweffect"><span>😎</span>Software Engineer at Pear Company (2022-present)</p>
+        </div>
+        <div id="contact_me">
+            <h3>Contact Me:</h3>
+            <div>
+                <form action="contact" method="get">
+                    <label for="input-text">Name:</label>                
+                    <div class="cyber-input mb-2">
+                        <input id="input-text" name="input-text" type="text" value="" placeholder="Enter name...">
+                    </div>                
+                    <label for="email">Email:</label>
+                    <div class="cyber-input mb-2">
+                        <input id="input-text" name="input-text" type="email" value="" placeholder="Enter email...">
+                    </div>                
+                    <label for="message">Message:</label>
+                    <div class="cyber-input mb-2">
+                        <input id="input-text" name="input-text" type="text" value="" placeholder="Enter message...">
+                    </div>                
+                    <button>
+                        Submit
+                    </button>
+                </form>
+                <img src="assets/img/city.png" alt="city">
+            </div>
+        </div>    
+    </main>
+</body>
+</html>

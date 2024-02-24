@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+}
+body{
+    background-color: #001d31;
+}
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+
+  :root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+.box {
+	border: 0.35rem solid;
+	padding: 3vw;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.box:nth-child(2) {
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+/* Flickering animation */
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+h3 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    margin: 30px 0;
+    color: #fff;
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px rgb(240, 17, 229),
+    0 0 80px rgb(240, 17, 229),
+    0 0 90px rgb(240, 17, 229),
+    0 0 100px rgb(240, 17, 229),
+    0 0 150px rgb(240, 17, 229);
+}
+
+
+p, a, ul, li, th, td, label{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+h3 {
+    text-align: center;
+}
+
+/*Header*/
+header {
+    width: 100%;
+    padding: 30px;
+}
+
+/*Profile*/
+#card{
+    display: flex;
+    justify-content: center;
+}
+
+#profile_photo {
+    width: 100%;
+    margin: 40px;
+    margin-left: 135px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    float: right;
+}
+
+#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about h2{
+    font-family: "Iceberg", sans-serif;
+    color: white;
+    font-size: 32px;
+}
+
+#about h3{
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 950px) {
+    #card{
+        flex-direction: column;
+    }
+    #about h2,#about h3,#about p {
+        margin: auto;
+    }
+    #profile_photo{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        margin-left: 40px;
+    }
+}
+
+#about h2,#about h3,#about p {
+    margin-bottom: 20px;
+    max-width: 70%;
+    text-align: left;
+    text-shadow: none;
+    float: left;
+}
+
+/*Contacts*/
+
+#contacts {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 550px) {
+    #contacts{
+        flex-direction: column;
+    }
+    #mail, #phone, #location{
+        margin-top: 20px;
+    }
+}
+ h4{
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    margin:15px 0;
+ }
+
+#mail, #phone, #location{
+    text-align: center;
+}
+
+.material-icons, .material-icons-outlined{
+    color: white;
+    font-size: 52px !important;
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px rgb(240, 17, 229),
+    0 0 80px rgb(240, 17, 229),
+    0 0 90px rgb(240, 17, 229),
+    0 0 100px rgb(240, 17, 229),
+    0 0 150px rgb(240, 17, 229);
+}
+
+/*Skills*/
+#skills_wrap{
+    display: flex;
+    justify-content: center;
+}
+#skills ul, #sm ol{
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+}
+#sm ol li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#sm ol li img{
+    width: 35px;
+    height: auto;
+}
+#skills ul{
+    flex-direction: column;
+}
+#xp{
+    display: flex;
+    flex-direction: column;
+}
+#xp-bar-c{
+    display: flex;
+}
+#xp-bar{
+    height:10px;
+    width:250px;
+    background:rgb(13, 122, 194);
+    border: 2px solid rgb(55, 38, 209);
+    margin:5px 20px;
+    display:inline-block;
+    vertical-align:middle;
+  }
+
+@media only screen and (max-width: 500px) {
+    #xp-bar{
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #sm ol{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
+/* Edu */
+
+table {
+    margin: auto;
+    text-align: left;
+}
+tr{
+    display: inline-grid;
+    grid-gap: 15px;
+}
+th{
+    margin-right: 25px;
+    font-weight: 700;
+}
+
+/* Exp */
+
+#exp p{
+    padding: 20px 70px;
+    width: fit-content;
+    margin: auto;
+}
+
+.gloweffect {
+	border: 2px solid lightcyan;
+	box-shadow: 0 0 10px cyan;
+	margin: 5em auto;
+	width: 80%;
+	padding: 3em;
+	background-color: rgba(0, 220, 255, 0.2);
+	border-radius: 0 100px 0 100px;
+	animation: glowEffect 3s infinite;
+}
+.welcome-msg h1,  .welcome-msg h2,.welcome-msg h3, .goodbye-msg h1, .goodbye-msg h2, .goodbye-msg h3 {
+	text-shadow: 0 0 3px cyan;
+	color: lightcyan;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+}
+
+/*Contact me*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+#contact_me div{
+    display: flex;
+    justify-content: center;
+}
+#contact_me div img{
+    width: 300px;
+    height: auto;
+margin-top: -100px;
+}
+
+.mb-2 {
+    margin-bottom: 16px !important;
+}
+label{
+    font-family: "Orbitron", sans-serif;
+    margin-bottom: 10px;
+}
+.cyber-input::before {
+    content: 'X';
+    color: transparent;
+    position: absolute;
+    display: block;
+    width: 240px;
+    padding: 0 2rem 0.2rem 1rem;
+    clip-path: polygon(0 calc(100% - 10px), 10px 100%, 100% 100%, 100% calc(100% - 8px), calc(100% - 20px) calc(100% - 8px), calc(100% - 20px - 8px) calc(100% - 2px), 11px calc(100% - 2px), 0 calc(100% - 13px));
+    background-color: cyan;
+}
+
+.cyber-input input{
+    width: 240px;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    padding: 0 2rem 0.2rem 1rem;
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+button{
+    background-color: cyan;
+    padding: 10px;
+    margin: 10px 0 50px 0;
+    max-width: 100px;
+}
+@media only screen and (max-width: 600px) {
+    #contact_me div{
+        justify-content: center;
+    }
+    form{
+        margin: 0;
+    }
+    #contact_me div img{
+       display: none;
+    }
+}
